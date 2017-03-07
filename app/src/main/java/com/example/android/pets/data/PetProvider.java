@@ -180,7 +180,7 @@ public class PetProvider extends ContentProvider {
      * Return the number of rows that were successfully updated.
      */
     private int updatePet(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
-        // If the {@link PetEntry#COLUMN_PET_NAME} key is present,
+        // If the {@link PetEntry#COLUMN_NAME} key is present,
         // check that the name value is not null.
         if (values.containsKey(PetContract.PetEntry.COLUMN_NAME)) {
             String name = values.getAsString(PetContract.PetEntry.COLUMN_NAME);
@@ -189,7 +189,7 @@ public class PetProvider extends ContentProvider {
             }
         }
 
-        // If the {@link PetEntry#COLUMN_PET_GENDER} key is present,
+        // If the {@link PetEntry#COLUMN_GENDER} key is present,
         // check that the gender value is valid.
         if (values.containsKey(PetContract.PetEntry.COLUMN_GENDER)) {
             Integer gender = values.getAsInteger(PetContract.PetEntry.COLUMN_GENDER);
@@ -198,7 +198,7 @@ public class PetProvider extends ContentProvider {
             }
         }
 
-        // If the {@link PetEntry#COLUMN_PET_WEIGHT} key is present,
+        // If the {@link PetEntry#COLUMN_WEIGTH} key is present,
         // check that the weight value is valid.
         if (values.containsKey(PetContract.PetEntry.COLUMN_WEIGTH)) {
             // Check that the weight is greater than or equal to 0 kg
